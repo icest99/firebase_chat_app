@@ -1,13 +1,138 @@
-body {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #171717
 }
+
+.message {
+  display: flex;
+  margin: 1em 0;
+  padding: 0 1em;
+}
+
+.message > p {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  transform: translateX(10px);
+  color: rgb(0, 0, 0);
+  padding: 0 0.8rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.901);
+}
+
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.sent > p {
+  color: white;
+  background-color: #218aff;
+}
+
+.message > img {
+  width: 8%;
+  height: auto;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+.submitMessage {
+  display: flex;
+}
+
+.submitMessage > input {
+  width: 85%;
+  height: auto;
+  background-color: #444444;
+  -webkit-appearance: none;
+  border: none;
+}
+
+.submitMessage > button {
+  width: 15%;
+  height: auto;
+}
+
+button {
+  background: #5E5DF0;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.sign-out {
+  margin: 2em;
+  background: #f05d5d;
+  box-shadow: #f05d5d 0 10px 20px -10px;
+}
+
+/* .chat-container {
+  max-width: ;
+} */
